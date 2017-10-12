@@ -1,6 +1,6 @@
 class Programozo
   attr_reader :name, :shoe_size, :grades
-  
+
   def initialize(name,shoe_size)
     @name = name
     @shoe_size = shoe_size
