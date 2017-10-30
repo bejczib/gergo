@@ -8,4 +8,13 @@ class BowlingTest < Minitest::Test
      game.roll(3)
      assert_equal(game.score,3)
    end
+
+   def test_two_roll
+     game = Bowling.new()
+     game.roll(3)
+     game.roll(5)
+     assert_equal(game.score,8)
+   end
+
+
 end
