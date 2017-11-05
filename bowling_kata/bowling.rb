@@ -12,11 +12,11 @@ class Bowling
     n = 1
     while n < 20
       if @points[n-1] == 10
-        POINTS << @points[n-1] + @points[n] + @points[n+1]
+        POINTS << @points[(n-1)..(n+1)].reduce(:+)
       elsif @points[n-1] + @points[n] == 10 && @points[n] !=  0
-        POINTS << @points[n-1] + @points[n] + @points[n+1]
+        POINTS << @points[(n-1)..(n+1)].reduce(:+)
       else
-        POINTS << @points[n-1] + @points[n]
+        POINTS << @points[(n-1)..(n)].reduce(:+)
       end
       n += 2
     end
